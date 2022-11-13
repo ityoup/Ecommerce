@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-MX">
+<head>
+    <meta charset="utf-8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Maderia preciado</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/images/logopreciado.png">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>    
+    
+    <header>
+        <div class="container">
+            <div data-aos="fade-right" data-aos-duration="1500" class="logo">
+                <img src="assets/images/logopreciado.png" alt="Subway Logo">
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="menu">                               
+                <div class="menu-mobile">
+                    <a href="">
+                        <li class="nav-button cartBtnMobile">
+                            <i class="fa-solid fa-cart-shopping">
+                                <span>0</span>
+                            </i>
+                    </li></a>
+                    <div class="toggle">
+                        <span></span>
+                        <span id="center"></span>
+                        <span></span>
+                    </div> 
+                </div>
+                <nav class="header-menu">
+                    <ul class="nav-bar">
+                        <a href=""><li class="nav-button">Nuestras opciones</li></a>
+                        <a href=""><li class="nav-button">Sobre nosotros</li></a>
+                        <a href=""><li class="nav-button">Carreira</li></a>
+                        <a href=""><li class="nav-button">Contato</li></a>
+                        <a href=""><li class="nav-button">Social</li></a>
+                        <a href="">
+                            <li class="nav-button cartBtn">
+                                <i class="fa-solid fa-cart-shopping">
+                                    <span>0</span>
+                                </i>
+                        </li></a>
+                        <a href="#foodMenu"><li class="nav-button buyButton">¡Pedir ahora!</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main  id="home" class="carousel">
+        <div class="carousel-dots">
+            <div class="dots" onclick="goPrev()">Previous</div>
+            <div class="dots" onclick="goNext()">Next</div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item first"></div>
+            <div class="carousel-item second"></div>
+        </div>
+    </main>
+    <section class="foodMenu" id="foodMenu">
+        <h2>Haz click en alguno de nuestros productos<br/>Y pide ahora</h2>
+        <div data-aos="fade-up" data-aos-duration="1500" class="product-area"></div>
+    </section>
+    <section class="banner-section">
+        <div class="mask">            
+            <h1 data-aos="fade-up" data-aos-duration="1500">La mejor madera<br/>
+                de<br/>
+                Puerto Vallarta
+        </div>
+    </section>      
+    <footer>
+        <div class="container">
+            <div  data-aos="fade-up" data-aos-duration="1500" class="logo">
+                <img src="assets/images/logopreciado.png" alt="Subway Logo">
+            </div>
+            <nav class="footer-menu">
+                <div data-aos="fade-right" data-aos-duration="1500" class="firstMenu">
+                    <h2>Conheça-nos</h2>
+                    <ul class="footer-items">                    
+                        <a href=""><li class="footer-button">Cardápio</li></a>
+                        <a href=""><li class="footer-button">Sobre nós</li></a>
+                        <a href=""><li class="footer-button">Carreira</li></a>
+                        <a href=""><li class="footer-button">Contato</li></a>
+                        <a href=""><li class="footer-button">Social</li></a>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1500" class="secondMenu">
+                    <h2>Seja dono de uma franquia</h2>
+                    <ul class="footer-items">                    
+                        <a href=""><li class="footer-button">Candidatar-se a proprietário</li></a>
+                        <a href=""><li class="footer-button">Informações sobre franquia</li></a>
+                        <a href=""><li class="footer-button">Próximas etapas</li></a>
+                        <a href=""><li class="footer-button">Participar de um seminário</li></a>
+                        <a href=""><li class="footer-button">Perguntas frequentes</li></a>
+                    </ul>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1500" class="socialMidias">
+                    <h2>Redes Sociais</h2>
+                    <ul class="footer-items">                    
+                        <a href=""><li class="footer-button"><i class="fab fa-facebook"></i></li></a>
+                        <a href=""><li class="footer-button"><i class="fab fa-instagram"></i></li></a>
+                        <a href=""><li class="footer-button"><i class="fab fa-twitter"></i></li></a>
+                        <a href=""><li class="footer-button"><i class="fab fa-youtube"></i></li></a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="copy">
+            <p class="copyright">&copy; 2022 Subway - Todos os direitos reservados - Feito por Michael Ribeiro</p>
+        </div>
+    </footer>
+
+    <!-- Shopping cart, Models and Modal -->
+    <div class="cartsection">
+        <div class="cart--area">
+            <h1>Su carrito</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>$ --</span>
+                </div>                
+                <div class="clearCart">
+                    <p><u>Vaciar carrito</u></p>
+                </div>
+                <div class="fixedArea">
+                    <div class="cart--finalizar">Concluir pedido</div>
+                    <div class="cart--backBtn">Escoger mas productos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="models">
+        <div class="product">
+            <a href="">
+                <div class="product--img"><img src="" /></div>
+                <div class="product--add">+</div>
+            </a>
+            <div class="product--price">$</div>
+            <div class="product--name">--</div>
+        </div>
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>                            
+            <div class="cart--item-price"></div>
+        </div>
+    </div>    
+    <div class="modalArea">
+        <div class="productBody">
+            <div class="productInfo--cancelMobileButton">Voltar</div>
+            <div class="productImgBig">
+                <img src="" />
+            </div>
+            <div class="productInfo">
+                <div class="headerModal">                    
+                    <h1>--</h1>
+                    <div class="productInfo--desc">--</div>
+                </div>
+                <div class="wrapper">
+                    <div class="productInfo--sizearea">
+                        <div class="productInfo--sector">Tamaño</div>
+                        <div class="productInfo--sizes">
+                            <div data-key="0" class="productInfo--size">Pulida</div>
+                            <div data-key="1" class="productInfo--size selected">No pulida</div>
+                        </div>
+                    </div>
+                    <div class="productInfo--breadarea">
+                        <div class="productInfo--sector">Escoja su tamaño</div>
+                        <select name="bread" id="bread" class="required">
+                            <option value="" disabled="disabled"></option>
+                            <option value="9 grãos">1.22 x 2.44m</option>
+                            <option value="Aveia e Mel">2.22 x 3.44m</option>
+                            <option value="Italiano Branco">3.22 x 4.44m</option>
+                            <option value="Italiano Branco">4.22 x 5.44m</option>
+                            <option value="Italiano Branco">5.22 x 6.44m</option>
+                        </select>
+                    </div>
+                    <div class="productInfo--saladarea">
+                        <div class="productInfo--sector">Agregue acompañantes</div>
+                        <div class="productInfo--saladitem">
+                            <div class="productInfo--row">
+                                <div class="productInfo--rowItem">
+                                    <input type="checkbox" name="Alface">Pulidor
+                                </div>
+                                <div class="productInfo--rowItem">                                
+                                <input type="checkbox" name="Tomate" id="">Impermeabilizante
+                                </div>
+                                <div class="productInfo--rowItem">
+                                    <input type="checkbox" name="Aceitona Preta" id="">Esmalte
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="productInfo--pricearea">
+                        <div class="productInfo--sector">Preço</div>
+                        <div class="productInfo--price">
+                            <div class="productInfo--actualPrice">$ --</div>
+                            <div class="productInfo--qtarea">
+                                <button class="productInfo--qtmenos">-</button>
+                                <div class="productInfo--qt">1</div>
+                                <button class="productInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="productInfo--addButton">Añadir al carrito</div>
+                <div class="productInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="assets/js/sandwiches.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
